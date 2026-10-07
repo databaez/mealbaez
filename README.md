@@ -5,7 +5,7 @@
 - Contreras-Wong, Talon:
 - Garas, Maria:
 - Lavrenkov, Dmitry:
-- Sieyoji, Pythagore:
+- Sieyoji, Pythagore:<br>
 **Solution Name**: Mealbaez
 
 # mealbaez
