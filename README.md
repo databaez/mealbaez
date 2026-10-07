@@ -1,11 +1,12 @@
-**Team name** : databaez
+**Team name** : databaez<br>
 **Team members**:
 - Nzeudeu Njomo, Hermann: 300564340
 - Basit, Ayaan:
 - Contreras-Wong, Talon:
 - Garas, Maria:
 - Lavrenkov, Dmitry:
-- Sieyoji, Pythagore:<br>
+- Sieyoji, Pythagore:<br><br>
+
 **Solution Name**: Mealbaez
 
 # mealbaez
