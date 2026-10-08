@@ -1,7 +1,7 @@
 **Team name** : databaez<br>
 **Team members**:
 - Nzeudeu Njomo, Hermann: 300564340
-- Basit, Ayaan:
+- Basit, Ayaan: 300528097
 - Contreras-Wong, Talon:
 - Garas, Maria:
 - Lavrenkov, Dmitry:
