@@ -3,7 +3,6 @@
 - Nzeudeu Njomo, Hermann: 300564340
 - Basit, Ayaan: 300528097
 - Contreras-Wong, Talon: 300500952
-- Garas, Maria:
 - Lavrenkov, Dmitry: 300499712
 - Sieyoji, Pythagore: 300560023
   <br><br>
