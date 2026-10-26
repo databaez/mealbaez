@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealBaez - Personalized Nutrition & Meal Timing</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      :root {
+        --bg-light: #f7faf0;
+        --bg-card: #eff5e1;
+        --primary-dark: #1e3a2b;
+        --primary-dark-hover: #162c20;
+        --accent-green: #c3ec77;
+        --accent-green-hover: #b1e25c;
+        --text-dark: #1e3a2b;
+        --text-muted: #556b5d;
+        --white: #ffffff;
+        --card-border: rgba(195, 236, 119, 0.4);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--bg-light);
+        color: var(--text-dark);
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Top Bar */
+      .top-banner {
+        background-color: var(--primary-dark);
+        color: var(--white);
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-image: radial-gradient(
+          rgba(195, 236, 119, 0.15) 1px,
+          transparent 0
+        );
+        background-size: 16px 16px;
+      }
+
+      .top-banner a {
+        color: var(--white);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: opacity 0.2s;
+      }
+
+      .top-banner a:hover {
+        opacity: 0.85;
+      }
+
+      .tennis-ball {
+        width: 16px;
+        height: 16px;
+        background-color: var(--accent-green);
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: var(--primary-dark);
+        padding: 16px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--white);
+        font-size: 1.35rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+
+      .logo-icon {
+        background-color: var(--accent-green);
+        color: var(--primary-dark);
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent-green);
+      }
+
+      .btn-contact {
+        background-color: var(--accent-green);
+        color: var(--primary-dark);
+        padding: 10px 22px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-contact:hover {
+        background-color: var(--accent-green-hover);
+        transform: translateY(-1px);
+      }
+
+      /* Container Layout */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 60px 0 80px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .hero-image-wrapper {
+        position: relative;
+        background-color: var(--accent-green);
+        border-radius: 24px;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-image: radial-gradient(
+          rgba(30, 58, 43, 0.12) 1.5px,
+          transparent 0
+        );
+        background-size: 20px 20px;
+      }
+
+      .hero-img {
+        width: 85%;
+        height: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.1));
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin-bottom: 12px;
+        border-bottom: 2px solid var(--accent-green);
+        padding-bottom: 2px;
+      }
+
+      .hero-title {
+        font-size: 3.2rem;
+        line-height: 1.15;
+        font-weight: 800;
+        color: var(--primary-dark);
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+      }
+
+      .hero-desc {
+        font-size: 1rem;
+        color: var(--text-muted);
+        margin-bottom: 32px;
+        max-width: 480px;
+        line-height: 1.6;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary {
+        background-color: var(--accent-green);
+        color: var(--primary-dark);
+        padding: 14px 28px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: all 0.2s;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-green-hover);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background-color: var(--bg-card);
+        color: var(--primary-dark);
+        padding: 14px 28px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.2s;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-secondary:hover {
+        background-color: #e2eccd;
+        transform: translateY(-2px);
+      }
+
+      .social-proof {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 8px 16px 8px 10px;
+        border-radius: 30px;
+        border: 1px solid rgba(195, 236, 119, 0.5);
+      }
+
+      .avatar-group {
+        display: flex;
+      }
+
+      .avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 2px solid var(--white);
+        margin-left: -10px;
+        object-fit: cover;
+      }
+
+      .avatar:first-child {
+        margin-left: 0;
+      }
+
+      .proof-text {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+      }
+
+      /* Section Header */
+      .section-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--primary-dark);
+        margin-bottom: 8px;
+      }
+
+      .section-subtitle {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+      }
+
+      /* Features Section */
+      .features-section {
+        padding: 60px 0 100px;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .feature-card {
+        background-color: var(--bg-card);
+        border-radius: 16px;
+        padding: 32px;
+        transition: transform 0.2s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .feature-icon-box {
+        background-color: var(--accent-green);
+        color: var(--primary-dark);
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+
+      .feature-card h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin-bottom: 10px;
+      }
+
+      .feature-card p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+
+      /* Testimonials Section */
+      .testimonials-section {
+        padding: 40px 0 80px;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-bottom: 30px;
+      }
+
+      .testimonial-card {
+        background-color: var(--bg-card);
+        border-radius: 16px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .quote-mark {
+        color: var(--primary-dark);
+        font-size: 2.5rem;
+        line-height: 1;
+        margin-bottom: 16px;
+        font-weight: 800;
+        opacity: 0.8;
+      }
+
+      .testimonial-text {
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        line-height: 1.6;
+      }
+
+      .slider-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .slider-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: var(--bg-card);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--primary-dark);
+        transition: background 0.2s;
+      }
+
+      .slider-btn:hover {
+        background-color: var(--accent-green);
+      }
+
+      .dots {
+        display: flex;
+        gap: 6px;
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #cbd5e1;
+      }
+
+      .dot.active {
+        background-color: var(--accent-green);
+        width: 18px;
+        border-radius: 4px;
+      }
+
+      /* Pricing Section */
+      .pricing-section {
+        padding: 40px 0 100px;
+      }
+
+      .pricing-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .toggle-wrapper {
+        background-color: var(--bg-card);
+        padding: 4px;
+        border-radius: 10px;
+        display: flex;
+        gap: 4px;
+      }
+
+      .toggle-btn {
+        padding: 8px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border: none;
+        background: transparent;
+        color: var(--primary-dark);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .toggle-btn.active {
+        background-color: var(--primary-dark);
+        color: var(--white);
+      }
+
+      .save-badge {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+
+      .pricing-card {
+        background-color: var(--bg-card);
+        border-radius: 16px;
+        padding: 36px 28px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .plan-name {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin-bottom: 4px;
+      }
+
+      .plan-discount {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+      }
+
+      .plan-desc {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+        margin-bottom: 32px;
+        min-height: 80px;
+      }
+
+      .plan-price {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--primary-dark);
+        margin-bottom: 24px;
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+      }
+
+      .plan-price span {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      .btn-plan {
+        background-color: var(--accent-green);
+        color: var(--primary-dark);
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        width: 100%;
+        margin-top: auto;
+        transition: background 0.2s;
+      }
+
+      .btn-plan:hover {
+        background-color: var(--accent-green-hover);
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--primary-dark);
+        color: var(--white);
+        padding: 60px 0 30px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .footer-nav {
+        display: flex;
+        gap: 24px;
+        list-style: none;
+      }
+
+      .footer-nav a {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+      }
+
+      .footer-nav a:hover {
+        color: var(--accent-green);
+      }
+
+      .got-to-top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--white);
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .top-arrow-btn {
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+
+      .got-to-top:hover .top-arrow-btn {
+        background-color: var(--accent-green);
+        color: var(--primary-dark);
+      }
+
+      .footer-bar {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .contact-info {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .info-item i {
+        color: var(--accent-green);
+      }
+
+      .copyright {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .testimonials-grid,
+        .pricing-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          gap: 24px;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Announcement Banner -->
+    <div class="top-banner">
+      <span class="tennis-ball"></span>
+      <span>Join Our Personalized Nutrition Demo For Free</span>
+      <a href="#pricing"><i data-lucide="arrow-right" size="14"></i></a>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i data-lucide="utensils"></i>
+        </div>
+        MealBaez
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+      <button class="btn-contact">Contact Us</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <!-- Left Hero Image Container -->
+            <div class="hero-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=800"
+                alt="Athletic Woman Pointing"
+                class="hero-img"
+              />
+            </div>
+
+            <!-- Right Hero Text -->
+            <div class="hero-content">
+              <div class="hero-badge">
+                Transform Your <span style="color: #e11d48">❤️</span> Health
+                with
+              </div>
+              <h1 class="hero-title">
+                Eat at the right time. Feel ready for anything.
+              </h1>
+              <p class="hero-desc">
+                Personal meal timing and habit plans that fit your routine, your
+                preferences, and your goals. Not a diet, a rhythm.
+              </p>
+
+              <div class="hero-btns">
+                <a href="#pricing" class="btn-primary">Build my plan</a>
+                <a href="#features" class="btn-secondary">Explore features</a>
+              </div>
+
+              <div class="social-proof">
+                <div class="avatar-group">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100"
+                    class="avatar"
+                    alt="Customer"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100"
+                    class="avatar"
+                    alt="Customer"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                    class="avatar"
+                    alt="Customer"
+                  />
+                </div>
+                <span class="proof-text">430+ Happy Customers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features-section" id="features">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Some Examples</h2>
+            <p class="section-subtitle">A better nutrition for a better you!</p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <i data-lucide="flower-2"></i>
+              </div>
+              <h3>Personalized Meal Planning</h3>
+              <p>
+                Meal ideas adapted to your schedule, preferences, and dietary
+                needs. Suggestions shift when your day goes.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <i data-lucide="graduation-cap"></i>
+              </div>
+              <h3>Smart Calendars and Reminders</h3>
+              <p>See meals, habits, and reminders in one timeline.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <i data-lucide="utensils"></i>
+              </div>
+              <h3>Daily Habit Tracking</h3>
+              <p>
+                Check off meals and habits throughout the day. Mark items done,
+                skipped or rescheduled.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <i data-lucide="clipboard-list"></i>
+              </div>
+              <h3>Progress and Insights</h3>
+              <p>
+                Charts that show your meal consistency, habit completion, and
+                trends over time.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <i data-lucide="dumbbell"></i>
+              </div>
+              <h3>Nearby Grocery Discovery</h3>
+              <p>
+                See ingredients lists from your planned meals and find nearby
+                stores that carry your need.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box">
+                <i data-lucide="shopping-bag"></i>
+              </div>
+              <h3>Social and Accountability</h3>
+              <p>
+                Share progress and do challenges between your friends with full
+                privacy control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Testimonials</h2>
+            <p class="section-subtitle">
+              Our satisfied clients share their success stories and experiences
+              on their journey to better health and well-being.
+            </p>
+          </div>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="quote-mark">“</div>
+              <p class="testimonial-text">
+                I can't thank MealBaez enough for their personalized nutrition
+                coaching. It has completely transformed my approach to food and
+                helped me shed those extra pounds. Highly recommended!
+              </p>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="quote-mark">“</div>
+              <p class="testimonial-text">
+                MealBaez has been a game-changer for me. The expert guidance and
+                support I received from their team made my weight loss journey
+                so much easier. Thank you!
+              </p>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="quote-mark">“</div>
+              <p class="testimonial-text">
+                I had struggled with my weight for years until I found MealBaez.
+                Their personalized approach and tailored nutrition plan made all
+                the difference. I've never felt better!
+              </p>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn" aria-label="Previous">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <button class="slider-btn" aria-label="Next">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="pricing-section" id="pricing">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Pricing</h2>
+            <p class="section-subtitle">
+              We outline our flexible and affordable options to support you on
+              your journey to optimal health and nutrition. We believe that
+              everyone deserves access to personalized nutrition guidance and
+              resources.
+            </p>
+          </div>
+
+          <div class="pricing-toggle">
+            <div class="toggle-wrapper">
+              <button class="toggle-btn active" id="btn-monthly">
+                Monthly
+              </button>
+              <button class="toggle-btn" id="btn-yearly">Yearly</button>
+            </div>
+            <span class="save-badge">Save 50% on Yearly</span>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+              <h3 class="plan-name">Basic Plan</h3>
+              <span class="plan-discount">Up to 50% off on Yearly Plan</span>
+              <p class="plan-desc">
+                Get started on your health journey with our Basic Plan. It
+                includes personalized nutrition coaching, access to our app,
+                meal planning assistance, and email support.
+              </p>
+              <div class="plan-price">Free</div>
+              <button class="btn-plan">Choose Plan</button>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="pricing-card">
+              <h3 class="plan-name">Premium Plan</h3>
+              <span class="plan-discount">Up to 50% off on Yearly Plan</span>
+              <p class="plan-desc">
+                Upgrade to our Premium Plan for enhanced features. In addition
+                to the Basic Plan, you'll receive video consultations, priority
+                support, and personalized recipe recommendations.
+              </p>
+              <div class="plan-price" id="premium-price">
+                $12 <span>/month</span>
+              </div>
+              <button class="btn-plan">Choose Plan</button>
+            </div>
+
+            <!-- Ultimate Plan -->
+            <div class="pricing-card">
+              <h3 class="plan-name">Ultimate Plan</h3>
+              <span class="plan-discount">Up to 50% off on Yearly Plan</span>
+              <p class="plan-desc">
+                Experience the full benefits of personalized nutrition coaching
+                with our Ultimate Plan. Enjoy all the features of the Premium
+                Plan, along with 24/7 chat support and exclusive workshops.
+              </p>
+              <div class="plan-price" id="ultimate-price">
+                $22 <span>/month</span>
+              </div>
+              <button class="btn-plan">Choose Plan</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <i data-lucide="utensils"></i>
+            </div>
+            MealBaez
+          </a>
+
+          <ul class="footer-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+
+          <a href="#" class="got-to-top">
+            Got To Top
+            <div class="top-arrow-btn">
+              <i data-lucide="arrow-up" size="18"></i>
+            </div>
+          </a>
+        </div>
+
+        <div class="footer-bar">
+          <div class="contact-info">
+            <div class="info-item">
+              <i data-lucide="mail" size="16"></i>
+              <span>hello@mealbaez.com</span>
+            </div>
+            <div class="info-item">
+              <i data-lucide="phone" size="16"></i>
+              <span>+91 91813 23 2309</span>
+            </div>
+            <div class="info-item">
+              <i data-lucide="map-pin" size="16"></i>
+              <span>Ottawa, Canada</span>
+            </div>
+          </div>
+          <div class="copyright">2026 MealBaez.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+      lucide.createIcons();
+
+      // Simple Pricing Switcher Logic
+      const btnMonthly = document.getElementById("btn-monthly");
+      const btnYearly = document.getElementById("btn-yearly");
+      const premiumPrice = document.getElementById("premium-price");
+      const ultimatePrice = document.getElementById("ultimate-price");
+
+      btnMonthly.addEventListener("click", () => {
+        btnMonthly.classList.add("active");
+        btnYearly.classList.remove("active");
+        premiumPrice.innerHTML = "$12 <span>/month</span>";
+        ultimatePrice.innerHTML = "$22 <span>/month</span>";
+      });
+
+      btnYearly.addEventListener("click", () => {
+        btnYearly.classList.add("active");
+        btnMonthly.classList.remove("active");
+        premiumPrice.innerHTML = "$6 <span>/month</span>";
+        ultimatePrice.innerHTML = "$11 <span>/month</span>";
+      });
+    </script>
+  </body>
+</html>
+
+```
