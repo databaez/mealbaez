@@ -1,0 +1,307 @@
+GUIDELINE CSS — SITE WEB / MEAL PLANNER Version : 1.0
+
+
+1. OBJECTIF ET PRINCIPES GÉNÉRAUX
+
+
+-   Reproduire l’identité visuelle: site
+    clair, naturel, épuré, orienté nutrition et bien-être.
+-   Garder les mêmes couleurs, typographies, espacements, boutons,
+    cartes, header et footer sur les quatre pages.
+-   Privilégier des composants réutilisables plutôt que de recréer le
+    même style dans chaque fichier.
+-   Le rendu doit être fidèle aux maquettes sur ordinateur et rester
+    lisible sur tablette et téléphone.
+-   Cohérence générale entre les pages
+
+
+2. PALETTE DE COULEURS
+
+COULEURS PRINCIPALES 
+- Couleur primaire (vert foncé, header/footer) : 
+- Couleur secondaire (vert moyen) : 
+- Couleur d’accent (vert citron / jaune-vert) : 
+- Couleur d’accent au survol : 
+
+FONDS 
+- Fond général de la page :
+- Fond des cartes : 
+- Fond des sections alternées :
+- Fond des champs de formulaire : 
+
+TEXTES 
+- Texte principal / titres : 
+- Texte courant : 
+- Texte secondaire / descriptions :
+- Texte sur fond foncé :
+- Texte des boutons : 
+
+BORDURES ET ÉTATS 
+- Bordure standard des cartes : 
+- Bordure des champs :
+- Couleur d’erreur :
+- Couleur de succès :
+
+3. TYPOGRAPHIE
+
+- Police principale : 
+- Police secondaire :
+- Taille du texte courant desktop :
+- Taille du texte courant mobile : 
+- Graisse des titres : 
+- Graisse du texte courant : 
+
+- H1 : [___ px desktop] / [___ px mobile] 
+- H2 : [___ px desktop] / [___ px mobile] 
+- H3 : [___ px desktop] / [___ px mobile] 
+- Texte courant : [___ px] 
+- Petit texte / légende : [___ px] 
+- Hauteur de ligne des paragraphes : [À REMPLIR]
+
+
+4. LARGEURS, ESPACEMENTS ET STRUCTURE
+
+- Largeur maximale du contenu :
+- Largeur maximale du texte : [À REMPLIR : ___ px] - Marge
+horizontale desktop : [À REMPLIR : ___ px] - Marge horizontale tablette
+: [À REMPLIR : ___ px] - Marge horizontale mobile : [À REMPLIR : ___
+px] - Espacement vertical entre sections : [À REMPLIR : ___ px] -
+Espacement entre cartes : [À REMPLIR : ___ px] - Padding intérieur des
+cartes : [À REMPLIR : ___ px]
+
+–space-xs : [À
+REMPLIR] –space-sm : [À REMPLIR] –space-md : [À REMPLIR] –space-lg : [À
+REMPLIR] –space-xl : [À REMPLIR] –section-spacing : [À REMPLIR]
+
+Règles : - Utiliser un conteneur commun pour aligner les sections. -
+Éviter les largeurs fixes qui provoquent un débordement sur mobile. -
+Utiliser max-width, width: 100%, Grid et Flexbox selon le besoin. - Ne
+pas corriger un problème de positionnement avec des marges négatives
+sans comprendre sa cause.
+
+5. HEADER ET NAVIGATION
+
+
+- Fond et hauteur du header : [À REMPLIR] 
+- Hauteur du logo : [À REMPLIR] 
+- Espacement entre les liens : [À REMPLIR] 
+- Taille des liens : [À REMPLIR] 
+- Couleur normale des liens : [À REMPLIR] 
+- Couleur au survol / lien actif : [À REMPLIR] 
+- Style du bouton de contact : utiliser les variables communes. 
+- Barre d’annonce : [PRÉSENTE SUR QUELLES PAGES ? À REMPLIR]
+
+Règles : - Le header doit être identique sur les quatre pages, sauf
+exception validée. - Le menu doit rester lisible sur les petits
+écrans. - Prévoir l’état hover, focus et actif des liens. - Le CSS du
+menu mobile doit être compatible avec le JavaScript de navigation.
+
+6. FOOTER
+
+À compléter : 
+- Hauteur / padding du footer : [À REMPLIR] 
+- Couleur des
+textes : [À REMPLIR] 
+- Couleur des icônes : [À REMPLIR] 
+- Couleur du
+bandeau inférieur : [À REMPLIR] 
+- Organisation mobile : [À REMPLIR]
+
+Règles : - Réutiliser le même footer sur les quatre pages. 
+- Sur mobile,
+autoriser le retour à la ligne ou empiler les groupes. 
+- Vérifier que
+les coordonnées et liens restent lisibles.
+
+7. BOUTONS ET LIENS
+
+Les maquettes utilisent des boutons compacts, avec des coins légèrement
+arrondis et une couleur d’accent claire pour les actions principales.
+
+Définir : - Hauteur minimale : [À REMPLIR] - Padding horizontal /
+vertical : [À REMPLIR] - Rayon des coins : [À REMPLIR] - Taille du texte
+: [À REMPLIR] - Durée de transition : [À REMPLIR]
+
+Variantes à prévoir : 1. Bouton principal : fond accent, texte [À
+REMPLIR]. 2. Bouton secondaire : fond [À REMPLIR], bordure [À REMPLIR].
+3. Bouton sur fond foncé : [À REMPLIR]. 4. Bouton désactivé : [À
+REMPLIR].
+
+États à prévoir : - :hover - :focus-visible - :active - :disabled
+
+Ne pas créer un style différent pour chaque bouton si leur fonction et
+leur importance sont identiques.
+
+======================================================================
+8. CARTES ET BLOCS DE CONTENU
+======================================================================
+
+Observation : - Cartes avec fond vert très pâle. - Coins légèrement
+arrondis. - Padding intérieur régulier. - Certaines cartes contiennent
+une icône dans un petit carré vert clair. - Les cartes d’articles ou
+d’exemples contiennent une grande image en haut, puis une catégorie, un
+titre et une description. - Les cartes de témoignages et de prix ont une
+structure propre.
+
+Définir : - Fond : [À REMPLIR] - Rayon des coins : [À REMPLIR] - Bordure
+: [À REMPLIR] - Ombre (si nécessaire) : [À REMPLIR] - Padding : [À
+REMPLIR] - Hauteur d’image : [À REMPLIR] - Ratio des images : [À
+REMPLIR]
+
+Composants à prévoir : - Carte de fonctionnalité / service. - Carte
+d’article ou d’exemple. - Carte de témoignage. - Carte de prix. - Carte
+d’étape / processus. - Carte d’appel à l’action.
+
+Règles : - Les cartes d’une même grille doivent avoir des espacements
+cohérents. - Les images doivent utiliser object-fit: cover lorsque
+nécessaire. - Ne pas déformer les images. - Prévoir une hauteur ou un
+alignement cohérent des titres et descriptions. - Les icônes doivent
+avoir une taille et un alignement homogènes.
+
+======================================================================
+9. SECTIONS ET ÉLÉMENTS IDENTIFIÉS DANS LES MAQUETTES
+======================================================================
+
+A. HERO / SECTION D’ACCUEIL - Première maquette : grande image à gauche
+et texte à droite. - Deuxième maquette : bloc d’introduction centré,
+avec icône ou logo au-dessus. - Garder une hiérarchie claire entre
+titre, description et bouton. - Prévoir une disposition empilée sur
+mobile. - Hauteur / largeur de la section : [À REMPLIR] - Ratio ou
+hauteur de l’image : [À REMPLIR]
+
+B. SECTION « HOW IT WORKS » - Titre et courte description centrés. -
+Première maquette : grille de cartes de fonctionnalités. - Deuxième
+maquette : étapes numérotées, avec grands numéros verts en arrière-plan
+ou au-dessus des cartes. - Grille desktop : [À REMPLIR : nombre de
+colonnes] - Grille mobile : [À REMPLIR : nombre de colonnes] - Style des
+numéros : [À REMPLIR]
+
+C. SECTION EXEMPLES / ARTICLES - Grille de cartes avec image, catégorie,
+titre et description. - Images alignées et de dimensions cohérentes. -
+Prévoir un espacement constant entre les cartes.
+
+D. SECTION TÉMOIGNAGES - Cartes alignées dans une grille ou un carrousel
+selon le HTML existant. - Citation, texte, avatar, nom et rôle
+éventuel. - Prévoir le style des flèches et indicateurs si un carrousel
+est présent.
+
+E. SECTION PRICING / TARIFS - Titre et description centrés. - Sélecteur
+mensuel / annuel visible au-dessus des cartes. - Cartes de prix
+alignées. - Prix mis en évidence. - Boutons d’action alignés. - Vérifier
+le rendu des trois cartes sur tablette et mobile.
+
+F. SECTION CALL TO ACTION - Bloc distinct avec fond vert pâle. - Texte à
+gauche et bouton à droite sur desktop. - Empilement sur mobile. -
+Décorations éventuelles : [À REMPLIR / À CONFIRMER]
+
+G. AUTRES SECTIONS - Pages et sections supplémentaires : [À REMPLIR] -
+Particularités propres à chaque page : [À REMPLIR]
+
+======================================================================
+10. RESPONSIVE DESIGN
+======================================================================
+
+Les quatre pages doivent fonctionner au minimum sur : - Téléphone : [À
+REMPLIR : largeur de référence] - Tablette : [À REMPLIR : largeur de
+référence] - Ordinateur : [À REMPLIR : largeur de référence]
+
+Breakpoints à valider par l’équipe : - Mobile : [À REMPLIR : ___ px] -
+Tablette : [À REMPLIR : ___ px] - Desktop : [À REMPLIR : ___ px]
+
+Comportements attendus : - Header : menu adapté aux petits écrans. -
+Hero : image et texte empilés sur mobile. - Grilles : 2 ou 3 colonnes
+sur desktop, puis 1 colonne sur mobile selon l’espace disponible. -
+Tarifs : cartes empilées sur mobile. - Témoignages : grille adaptée ou
+carrousel utilisable. - Footer : éléments empilés ou répartis sur
+plusieurs lignes. - Aucun élément ne doit provoquer de scroll horizontal
+involontaire. - Les textes et boutons doivent rester lisibles et faciles
+à utiliser au toucher.
+
+Ne pas se limiter à réduire les tailles : réorganiser les éléments
+lorsque la disposition desktop ne convient plus.
+
+======================================================================
+11. ACCESSIBILITÉ ET QUALITÉ CSS
+======================================================================
+
+-   Garder un contraste suffisant entre texte et arrière-plan.
+-   Ne pas supprimer les contours de focus sans solution de
+    remplacement.
+-   Utiliser :focus-visible pour les éléments interactifs.
+-   Ne pas communiquer une information uniquement par la couleur.
+-   Prévoir des tailles de cibles tactiles adaptées sur mobile.
+-   Éviter !important, sauf cas exceptionnel documenté.
+-   Éviter les sélecteurs trop spécifiques.
+-   Éviter les styles inline, sauf nécessité validée.
+-   Ne pas dupliquer les mêmes règles dans plusieurs fichiers.
+-   Utiliser des noms de classes compréhensibles et cohérents avec le
+    HTML existant.
+-   Ne pas modifier la structure HTML sans accord de l’équipe.
+
+======================================================================
+12. ORGANISATION DES FICHIERS ET RESPONSABILITÉS
+======================================================================
+
+Structure proposée (à adapter à l’arborescence réelle) :
+
+css/ variables.css -> couleurs, polices, espacements, rayons global.css
+-> reset, body, typographie générale layout.css -> conteneurs, grilles,
+sections, header/footer si attribués components.css -> boutons, cartes,
+formulaires, composants communs responsive.css -> media queries communes
+page-home.css -> exceptions propres à la page d’accueil page-about.css
+-> exceptions propres à la page About page-pricing.css -> exceptions
+propres à la page Pricing page-contact.css -> exceptions propres à la
+page Contact
+
+Répartition à confirmer : - CSS 1 : [À REMPLIR : fichiers /
+responsabilités] - CSS 2 : [À REMPLIR : fichiers / responsabilités] -
+CSS 3 : [À REMPLIR : fichiers / responsabilités]
+
+Règle d’import : - Charger les fichiers dans un ordre commun sur les
+quatre pages. - Charger les styles spécifiques à une page après les
+styles communs. - Ne pas importer plusieurs fois le même fichier. -
+Documenter toute exception de style propre à une page.
+
+======================================================================
+13. PROCESSUS DE VALIDATION
+======================================================================
+
+Avant de déclarer une page terminée, vérifier :
+
+[ ] Les couleurs correspondent à la palette validée. [ ] Les polices et
+tailles sont cohérentes. [ ] Le header et le footer sont cohérents avec
+les autres pages. [ ] Les titres et sections sont correctement alignés.
+[ ] Les cartes ont des espacements et des rayons cohérents. [ ] Les
+images ne sont pas déformées. [ ] Les boutons ont les mêmes styles et
+états. [ ] La page est utilisable sur mobile, tablette et desktop. [ ]
+Aucun débordement horizontal involontaire. [ ] Aucun texte n’est coupé
+ou illisible. [ ] Les états hover, focus et active sont prévus. [ ] La
+console du navigateur ne révèle pas de problème lié à l’intégration CSS.
+[ ] Le rendu a été comparé à la maquette.
+
+VALIDATION COLLECTIVE - Personne responsable de la validation visuelle :
+[À REMPLIR] - Personne responsable de la validation responsive : [À
+REMPLIR] - Date / heure de revue : [À REMPLIR] - Décisions ou exceptions
+validées : [À REMPLIR]
+
+======================================================================
+14. DÉCISIONS À PRENDRE AVANT LE DÉBUT DU CSS
+======================================================================
+
+Compléter cette liste en équipe :
+
+1.  Codes hexadécimaux définitifs de toutes les couleurs : [À REMPLIR]
+2.  Police et source de la police : [À REMPLIR]
+3.  Tailles H1, H2, H3 et texte courant : [À REMPLIR]
+4.  Largeur maximale du conteneur : [À REMPLIR]
+5.  Breakpoints responsive : [À REMPLIR]
+6.  Rayons des boutons et cartes : [À REMPLIR]
+7.  Ombres autorisées ou non : [À REMPLIR]
+8.  Les contours bleus des captures sont-ils des repères ou le design
+    final ? : [À REMPLIR]
+9.  Les quatre pages utilisent-elles exactement le même header et footer
+    ? : [À REMPLIR]
+10. Les noms de classes HTML existants et les éventuelles classes à
+    harmoniser : [À REMPLIR]
+
+FIN DU DOCUMENT
