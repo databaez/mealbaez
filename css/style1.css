@@ -116,8 +116,10 @@ button {
     font-weight: 500;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--color-accent-green);
+    font-weight: 600;
 }
 
 .nav-btn {
@@ -563,6 +565,11 @@ button {
     font-size: var(--font-size-xs);
 }
 
+.footer-logo {
+    width: 32px;
+    height: 32px;
+}
+
 .go-to-top {
     display: flex;
     align-items: center;
@@ -594,6 +601,140 @@ button {
     align-items: center;
     gap: 8px;
 }
+
+/* ==========================================
+   TEAM PAGE SPECIFIC STYLES (FIGMA MATCHING)
+   ========================================== */
+
+.team-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.team-intro-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 40px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-hero-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--color-text-main);
+    line-height: 1.5;
+}
+
+.team-hero-description {
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    color: var(--color-text-subtle);
+    line-height: 1.5;
+    max-width: 1200px;
+}
+
+.members-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.member-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-image-wrapper {
+    width: 100%;
+    height: 280px;
+    background-color: var(--color-bg-main);
+}
+
+.member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 20px;
+    background-color: var(--color-bg-card);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.member-name {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text-main);
+    line-height: 1.2;
+}
+
+.member-role {
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    color: var(--color-text-subtle);
+    line-height: 1.3;
+}
+
+.cta-section {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cta-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-text-main);
+    line-height: 1.5;
+}
+
+.cta-description {
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.cta-btn {
+    background-color: var(--color-primary);
+    color: var(--color-text-main);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    padding: 18px 24px;
+    border-radius: var(--radius-sm);
+    width: 100%;
+
+}
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================== */
 
 @media (min-width: 768px) {
     .nav-container {
@@ -637,6 +778,22 @@ button {
     .Pricing-group {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .members-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 48px 40px;
+    }
+
+    .cta-btn {
+        width: auto;
+        white-space: nowrap;
     }
 
     .footer-nav {
@@ -692,6 +849,35 @@ button {
     }
 
     .main-header-description {
+        font-size: var(--font-size-md);
+    }
+
+    .team-intro-card {
+        padding: 80px 100px;
+    }
+
+    .team-hero-title {
+        font-size: var(--font-size-desktop-h2);
+    }
+
+    .team-hero-description {
+        font-size: var(--font-size-md);
+    }
+
+    .members-group {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .cta-section {
+        padding: 80px;
+    }
+
+    .cta-title {
+        font-size: 34px;
+    }
+
+    .cta-description {
         font-size: var(--font-size-md);
     }
 

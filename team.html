@@ -3,107 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet Our Team</title>
+    <title>Meet Our Team - Mealbeaz</title>
+    <link rel="stylesheet" href="./css/style1.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div>
-                <img src="" alt="">
-                <p>Mealbeaz</p>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <img src="./medias/logo-main.png" alt="Mealbeaz Logo" class="nav-logo">
+                <p class="nav-title">Mealbeaz</p>
             </div>
-            <div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Teams</a></li>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#how-it-works" class="nav-link">How it works</a></li>
+                    <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="team.html" class="nav-link active">Teams</a></li>
                 </ul>
-                <button>Contact Us</button>
+                <button class="nav-btn">Contact Us</button>
             </div>
         </nav>
     </header>
-    <main>
-        <div class="hero">
-            <h1>Meet Our Team of Experts</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, vel ipsa saepe, autem reiciendis soluta quos delectus iusto impedit voluptates natus molestiae alias corrupti. Quo facere provident voluptas eligendi maiores!</p>
-            <div class="Members-group">
-                <div class="members-container">
-                    <img src="" alt="">
-                    <div class="member-container-text">
-                        <h4>Dmitry Lavrenkov</h4>
-                        <p>Co-Founder and CEO</p>
-                    </div>
-                </div>
-                <div class="members-container">
-                    <img src="" alt="">
-                    <div class="member-container-text">
-                        <h4>Hermann Nzeudeu</h4>
-                        <p>Co-founder and CTO</p>
-                    </div>
-                </div>
-                <div class="members-container">
-                    <img src="" alt="">
-                    <div class="member-container-text">
-                        <h4>Pythagore Sieyoji</h4>
-                        <p>Lead Designer</p>
-                    </div>
-                </div>
-                <div class="members-container">
-                    <img src="" alt="">
-                    <div class="member-container-text">
-                        <h4>Ayaan Basit</h4>
-                        <p>Lead Frontend developer</p>
-                    </div>
-                </div>
-                <div class="members-container">
-                    <img src="" alt="">
-                    <div class="member-container-text">
-                        <h4>Talon Kai</h4>
-                        <p>Lead Backend developer</p>
-                    </div>
-                </div>
+
+    <main class="main-content">
+        <!-- Section Équipe principale -->
+        <section class="team-hero">
+            <div class="team-intro-card">
+                <h1 class="team-hero-title">Meet Our Team of Experts</h1>
+                <p class="team-hero-description">
+                    Our team at Nutritionist is composed of highly skilled professionals who are passionate about helping you achieve your health and wellness goals. With a diverse range of expertise in nutrition, coaching, and support, our team is dedicated to providing you with the guidance and personalized care you need.
+                </p>
             </div>
-        </div>
-        <div class="CTA">
-            <div class="Join-us">
-                <h3>Join Our Team</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium beatae perferendis neque nisi minima, aspernatur maxime, dolores fugiat corrupti, nesciunt nostrum optio dignissimos eaque ratione unde minus libero veniam alias.</p>
+
+            <!-- Grille des membres -->
+            <div class="members-group">
+                <article class="member-card">
+                    <div class="member-image-wrapper">
+                        <img src="./medias/pythagore.jpeg" alt="Pythagore Sieyoji" class="member-img">
+                    </div>
+                    <div class="member-info">
+                        <h4 class="member-name">Pythagore Sieyoji</h4>
+                        <p class="member-role">Co-Founder and CEO</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-image-wrapper">
+                        <img src="./medias/hermann.jpeg" alt="Hermann Nzeudeu" class="member-img">
+                    </div>
+                    <div class="member-info">
+                        <h4 class="member-name">Hermann Nzeudeu</h4>
+                        <p class="member-role">Co-Founder and CTO</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-image-wrapper">
+                        <img src="./medias/talon.jpeg" alt="Talon Kai" class="member-img">
+                    </div>
+                    <div class="member-info">
+                        <h4 class="member-name">Talon Kai</h4>
+                        <p class="member-role">Lead Backend dev.</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-image-wrapper">
+                        <img src="assets/rachel.jpg" alt="Rachel Adams" class="member-img">
+                    </div>
+                    <div class="member-info">
+                        <h4 class="member-name">Rachel Adams</h4>
+                        <p class="member-role">Chief Marketing Officer</p>
+                    </div>
+                </article>
             </div>
-            <button>Apply Now</button>
-        </div>
+        </section>
+
+        <!-- Section Call To Action (Recrutement) -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h3 class="cta-title">Join Our Team</h3>
+                <p class="cta-description">
+                    We are always on the lookout for talented individuals who are enthusiastic about making a difference. Explore our career opportunities and join us in our mission to help people achieve their health and wellness goals.
+                </p>
+            </div>
+            <button class="cta-btn">Apply Now</button>
+        </section>
     </main>
-    <footer>
-        <nav>
-            <div>
-                <img src="" alt="">
-                <p>Mealbeaz</p>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <div class="footer-brand">
+                <img src="./medias/logo-second.png" alt="Mealbeaz Logo" class="footer-logo">
+                <p class="footer-title">Mealbeaz</p>
             </div>
-            <div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Teams</a></li>
+            <div class="footer-menu">
+                <ul class="footer-list">
+                    <li class="footer-item"><a href="index.html" class="footer-link">Home</a></li>
+                    <li class="footer-item"><a href="#how-it-works" class="footer-link">How it works</a></li>
+                    <li class="footer-item"><a href="#pricing" class="footer-link">Pricing</a></li>
+                    <li class="footer-item"><a href="team.html" class="footer-link">Teams</a></li>
                 </ul>
                 <div class="go-to-top">
-                    <p>Go to Top</p>
-                    <img src="" alt="">
+                    <p class="go-to-top-text">Go to Top</p>
+                    <img src="assets/icon-arrow-up.svg" alt="Arrow Up" class="go-to-top-icon">
                 </div>
             </div>
         </nav>
         <div class="contact">
-            <div class="">
+            <div class="contact-details">
                 <div class="email">
-                    <img src="" alt="">
-                    <p>hello@mealbaez.com</p>
+                    <img src="assets/icon-email.svg" alt="Email Icon" class="contact-icon">
+                    <p class="contact-text">hello@mealbaez.com</p>
                 </div>
                 <div class="location">
-                    <img src="" alt="">
-                    <p>Ottawa, ON, Canada</p>
+                    <img src="assets/icon-location.svg" alt="Location Icon" class="contact-icon">
+                    <p class="contact-text">Ottawa, ON, Canada</p>
                 </div>
             </div>
-            <div>
+            <div class="copyright">
                 © 2026 Mealbaez. All rights reserved.
             </div>
         </div>
