@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style1.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <title>Home</title>
 </head>
 <body>
     <header class="header">
         <nav class="nav-container">
             <div class="nav-brand">
-                <img src="./medias/logo-main.png" alt="" class="nav-logo">
+                <img src="./medias/logo-main.png" alt="Mealbeaz Logo" class="nav-logo">
                 <p class="nav-title">Mealbeaz</p>
             </div>
             <div class="nav-menu">
@@ -24,6 +25,7 @@
             </div>
         </nav>
     </header>
+
     <main class="main-content">
         <div class="main-header">
             <img src="./medias/hearder-image.png" alt="Header Image" class="main-header-img">
@@ -31,7 +33,7 @@
                 <div class="main-header-text-content">
                     <h3 class="main-header-subtitle">Transform Your ❤️ Health with</h3>
                     <h1 class="main-header-title">Eat at the right time. Feel ready for anything.</h1>
-                    <p class="main-header-description">Welcome to Mealbaez, your partner in achieving optimal health through personalized meal planning. Personalized meal timing and habit plans that fit your routine, your preferences, and your goals. Not a diet a rhythm. Start your journey today and experience the power of personalized meal plan.</p>
+                    <p class="main-header-description">Welcome to Mealbeaz, your partner in achieving optimal health through personalized meal planning. Personalized meal timing and habit plans that fit your routine, your preferences, and your goals. Not a diet a rhythm. Start your journey today and experience the power of personalized meal plan.</p>
                 </div>
                 <div class="main-header-buttons">
                     <button class="btn-primary">Build my plan</button>
@@ -39,9 +41,9 @@
                 </div>
                 <div class="main-header-users">
                     <div class="users">
-                        <img src="./medias/avatar1.jpg" alt="" class="user-avatar">
-                        <img src="./medias/avatar2.jpg" alt="" class="user-avatar">
-                        <img src="./medias/avatar3.jpg" alt="" class="user-avatar">
+                        <img src="./medias/avatar1.jpg" alt="User 1" class="user-avatar">
+                        <img src="./medias/avatar2.jpg" alt="User 2" class="user-avatar">
+                        <img src="./medias/avatar3.jpg" alt="User 3" class="user-avatar">
                     </div>
                     <div class="users-count">
                         <p class="users-text"><span class="users-number">+450</span> Happy Customers</p>
@@ -54,6 +56,7 @@
             <h1 class="howork-title">How it works</h1>
             <p class="howork-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quae. Vitae laboriosam pariatur ab sit autem impedit voluptates, accusamus sapiente alias illo eaque, cupiditate eligendi? Labore earum vitae impedit rerum?</p>
         </div>
+
         <div class="benefits">
             <div class="benefits-block">
                 <div class="benefit-title">
@@ -110,6 +113,7 @@
                 </p>
             </div>
         </div>
+
         <div class="examples">
             <h1 class="examples-title">Some Examples</h1>
             <p class="examples-description">
@@ -156,7 +160,6 @@
                         lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -196,6 +199,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pricing">
             <h1 class="pricing-title">Our Pricing</h1>
             <p class="pricing-description">
@@ -203,8 +207,8 @@
             </p>
             <div class="plan-button">
                 <div class="time-plan">
-                    <button class="time-plan-btn active">Monthly</button>
-                    <button class="time-plan-btn">Yearly</button>
+                    <button id="btn-monthly" class="time-plan-btn active">Monthly</button>
+                    <button id="btn-yearly" class="time-plan-btn">Yearly</button>
                 </div>
                 <p class="save-info">Save 50% on Yearly</p>
             </div>
@@ -215,12 +219,10 @@
                     <p class="plan-description">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
                     </p>
-                    <p class="plan-price-container">
+                    <p class="plan-price-container" id="basic-price">
                         <span class="price">$20</span> /month
                     </p>
-                    <button class="plan-btn">
-                        Choose plan
-                    </button>
+                    <button class="plan-btn">Choose plan</button>
                 </div>
                 <div class="pricing-plan">
                     <h2 class="plan-title">Premium Plan</h2>
@@ -228,12 +230,11 @@
                     <p class="plan-description">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
                     </p>
-                    <p class="plan-price-container">
+                    <!-- ID "premium-price" ajouté ici -->
+                    <p class="plan-price-container" id="premium-price">
                         <span class="price">$50</span> /month
                     </p>
-                    <button class="plan-btn">
-                        Choose plan
-                    </button>
+                    <button class="plan-btn">Choose plan</button>
                 </div>
                 <div class="pricing-plan">
                     <h2 class="plan-title">Family Plan</h2>
@@ -241,12 +242,11 @@
                     <p class="plan-description">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
                     </p>
-                    <p class="plan-price-container">
+                    <!-- ID "family-price" (ou ultimate-price) ajouté ici -->
+                    <p class="plan-price-container" id="family-price">
                         <span class="price">$15</span> /users/month
                     </p>
-                    <button class="plan-btn">
-                        Choose plan
-                    </button>
+                    <button class="plan-btn">Choose plan</button>
                 </div>
             </div>
         </div>
@@ -287,5 +287,33 @@
             </div>
         </div>
     </footer>
+
+    <script>
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      const btnMonthly = document.getElementById("btn-monthly");
+      const btnYearly = document.getElementById("btn-yearly");
+      const basicPrice = document.getElementById("basic-price");
+      const premiumPrice = document.getElementById("premium-price");
+      const familyPrice = document.getElementById("family-price");
+
+      btnMonthly.addEventListener("click", () => {
+        btnMonthly.classList.add("active");
+        btnYearly.classList.remove("active");
+        basicPrice.innerHTML = '<span class="price">$20</span> /month';
+        premiumPrice.innerHTML = '<span class="price">$50</span> /month';
+        familyPrice.innerHTML = '<span class="price">$15</span> /users/month';
+      });
+
+      btnYearly.addEventListener("click", () => {
+        btnYearly.classList.add("active");
+        btnMonthly.classList.remove("active");
+        basicPrice.innerHTML = '<span class="price">$10</span> /month';
+        premiumPrice.innerHTML = '<span class="price">$25</span> /month';
+        familyPrice.innerHTML = '<span class="price">$7.50</span> /users/month';
+      });
+    </script>
 </body>
 </html>

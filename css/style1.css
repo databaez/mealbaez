@@ -602,10 +602,6 @@ button {
     gap: 8px;
 }
 
-/* ==========================================
-   TEAM PAGE SPECIFIC STYLES (FIGMA MATCHING)
-   ========================================== */
-
 .team-hero {
     display: flex;
     flex-direction: column;
@@ -732,9 +728,77 @@ button {
 
 }
 
-/* ==========================================
-   MEDIA QUERIES (RESPONSIVE)
-   ========================================== */
+.process {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.process-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.process-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.process-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.process-number {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--color-accent-green);
+    line-height: 1;
+    min-width: 50px;
+}
+
+.process-content {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.process-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.process-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-accent-green);
+}
+
+.process-heading {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.process-text {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-subtle);
+}
+
 
 @media (min-width: 768px) {
     .nav-container {
@@ -899,5 +963,15 @@ button {
 
     .footer {
         padding: 40px var(--container-padding-desktop);
+    }
+    .process-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    .process-number {
+        font-size: 48px;
+        min-width: 60px;
     }
 }
