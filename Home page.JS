@@ -3,10 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof lucide !== "undefined") {
     lucide.createIcons();
   }
-
-  /* ==========================================
-     1. Testimonials Slider Logic
-     ========================================== */
   const testimonialsData = [
     {
       quote: "I can't thank MealBaez enough for their personalized nutrition coaching. It has completely transformed my approach to food and helped me shed those extra pounds. Highly recommended!",
@@ -73,14 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
         updateTestimonials(currentTestimonialIndex);
       });
     });
-
-    // Initialize first view
     updateTestimonials(0);
   }
-
-  /* ==========================================
-     2. Pricing Toggle Logic (Monthly / Yearly)
-     ========================================== */
   const btnMonthly = document.getElementById("btn-monthly");
   const btnYearly = document.getElementById("btn-yearly");
   const premiumPrice = document.getElementById("premium-price");
@@ -101,10 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ultimatePrice.innerHTML = "$11 <span>/month</span>";
     });
   }
-
-  /* ==========================================
-     3. Scroll-to-Top Button Logic
-     ========================================== */
   const goToTopBtn = document.querySelector(".got-to-top");
   if (goToTopBtn) {
     goToTopBtn.addEventListener("click", (e) => {
@@ -115,10 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-  /* ==========================================
-     4. Interactive Call-to-Actions (Buttons)
-     ========================================== */
   const planButtons = document.querySelectorAll(".btn-plan");
   planButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
