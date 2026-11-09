@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/structure (1).css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <title>How it works</title>
 </head>
@@ -183,6 +185,8 @@
       if (typeof lucide !== 'undefined') {
         lucide.createIcons();
       }
+      import Process from './js/process.js';
+      Process.init();
     </script>
 </body>
 </html>
