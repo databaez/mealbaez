@@ -291,31 +291,33 @@
     </footer>
 
     <script>
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
+        import './js/Home page.js';
 
-      const btnMonthly = document.getElementById("btn-monthly");
-      const btnYearly = document.getElementById("btn-yearly");
-      const basicPrice = document.getElementById("basic-price");
-      const premiumPrice = document.getElementById("premium-price");
-      const familyPrice = document.getElementById("family-price");
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
 
-      btnMonthly.addEventListener("click", () => {
-        btnMonthly.classList.add("active");
-        btnYearly.classList.remove("active");
-        basicPrice.innerHTML = '<span class="price">$20</span> /month';
-        premiumPrice.innerHTML = '<span class="price">$50</span> /month';
-        familyPrice.innerHTML = '<span class="price">$15</span> /users/month';
-      });
+        const btnMonthly = document.getElementById("btn-monthly");
+        const btnYearly = document.getElementById("btn-yearly");
+        const basicPrice = document.getElementById("basic-price");
+        const premiumPrice = document.getElementById("premium-price");
+        const familyPrice = document.getElementById("family-price");
 
-      btnYearly.addEventListener("click", () => {
-        btnYearly.classList.add("active");
-        btnMonthly.classList.remove("active");
-        basicPrice.innerHTML = '<span class="price">$10</span> /month';
-        premiumPrice.innerHTML = '<span class="price">$25</span> /month';
-        familyPrice.innerHTML = '<span class="price">$7.50</span> /users/month';
-      });
+        btnMonthly.addEventListener("click", () => {
+            btnMonthly.classList.add("active");
+            btnYearly.classList.remove("active");
+            basicPrice.innerHTML = '<span class="price">$20</span> /month';
+            premiumPrice.innerHTML = '<span class="price">$50</span> /month';
+            familyPrice.innerHTML = '<span class="price">$15</span> /users/month';
+        });
+
+        btnYearly.addEventListener("click", () => {
+            btnYearly.classList.add("active");
+            btnMonthly.classList.remove("active");
+            basicPrice.innerHTML = '<span class="price">$10</span> /month';
+            premiumPrice.innerHTML = '<span class="price">$25</span> /month';
+            familyPrice.innerHTML = '<span class="price">$7.50</span> /users/month';
+        });
     </script>
 </body>
 </html>
