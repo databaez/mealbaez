@@ -23,7 +23,8 @@
                     <li class="nav-item"><a href="./pricing.html" class="nav-link">Pricing</a></li>
                     <li class="nav-item"><a href="./team.html" class="nav-link">Teams</a></li>
                 </ul>
-                <button class="nav-btn">Contact Us</button>
+                <!-- Added btn-contact class -->
+                <button class="nav-btn btn-contact">Contact Us</button>
             </div>
         </nav>
     </header>
@@ -168,37 +169,31 @@
         <div class="testimony">
             <h1 class="testimony-title">Our Testimonials</h1>
             <p class="testimony-description">Our satisfied clients share their success stories and experiences on their journey to better health and well-being.</p>
+            
             <div class="testimony-group">
-                <div class="testimony-container">
-                    <img src="" alt="" class="testimony-img">
-                    <p class="testimony-text">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
-                    </p>
-                    <div class="testimony-person">
-                        <img src="" alt="" class="person-avatar">
-                        <p class="person-name">Jennifer Anderson</p>
-                    </div>
+                <!-- Added testimonial-card class for JS targeting -->
+                <div class="testimony-container testimonial-card">
+                    <!-- Content will be injected by JS -->
                 </div>
-                <div class="testimony-container">
-                    <img src="" alt="" class="testimony-img">
-                    <p class="testimony-text">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
-                    </p>
-                    <div class="testimony-person">
-                        <img src="" alt="" class="person-avatar">
-                        <p class="person-name">Robert Johnson</p>
-                    </div>
+                <div class="testimony-container testimonial-card">
+                     <!-- Content will be injected by JS -->
                 </div>
-                <div class="testimony-container">
-                    <img src="" alt="" class="testimony-img">
-                    <p class="testimony-text">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
-                    </p>
-                    <div class="testimony-person">
-                        <img src="" alt="" class="person-avatar">
-                        <p class="person-name">Emily Davis</p>
-                    </div>
+                <div class="testimony-container testimonial-card">
+                     <!-- Content will be injected by JS -->
                 </div>
+            </div>
+
+            <!-- Added missing Slider Controls for JS -->
+            <div class="slider-controls" style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 20px;">
+                <button class="slider-btn" aria-label="Previous" style="background: var(--color-bg-card); padding: 8px 12px; border-radius: 8px;">&larr;</button>
+                <div class="dots" style="display: flex; gap: 8px;">
+                    <span class="dot active" style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-primary); cursor: pointer;"></span>
+                    <span class="dot" style="width: 10px; height: 10px; border-radius: 50%; background: #ccc; cursor: pointer;"></span>
+                    <span class="dot" style="width: 10px; height: 10px; border-radius: 50%; background: #ccc; cursor: pointer;"></span>
+                    <span class="dot" style="width: 10px; height: 10px; border-radius: 50%; background: #ccc; cursor: pointer;"></span>
+                    <span class="dot" style="width: 10px; height: 10px; border-radius: 50%; background: #ccc; cursor: pointer;"></span>
+                </div>
+                <button class="slider-btn" aria-label="Next" style="background: var(--color-bg-card); padding: 8px 12px; border-radius: 8px;">&rarr;</button>
             </div>
         </div>
 
@@ -215,8 +210,10 @@
                 <p class="save-info">Save 50% on Yearly</p>
             </div>
             <div class="Pricing-group">
-                <div class="pricing-plan">
-                    <h2 class="plan-title">Basic Plan</h2>
+                <!-- Added pricing-card class -->
+                <div class="pricing-plan pricing-card">
+                    <!-- Added plan-name class -->
+                    <h2 class="plan-title plan-name">Basic Plan</h2>
                     <p class="plan-subtitle">Up to 50% off on Yearly Plan</p>
                     <p class="plan-description">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
@@ -224,31 +221,31 @@
                     <p class="plan-price-container" id="basic-price">
                         <span class="price">$20</span> /month
                     </p>
-                    <button class="plan-btn">Choose plan</button>
+                    <!-- Added btn-plan class -->
+                    <button class="plan-btn btn-plan">Choose plan</button>
                 </div>
-                <div class="pricing-plan">
-                    <h2 class="plan-title">Premium Plan</h2>
+                <div class="pricing-plan pricing-card">
+                    <h2 class="plan-title plan-name">Premium Plan</h2>
                     <p class="plan-subtitle">Up to 50% off on Yearly Plan</p>
                     <p class="plan-description">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
                     </p>
-                    <!-- ID "premium-price" ajouté ici -->
                     <p class="plan-price-container" id="premium-price">
                         <span class="price">$50</span> /month
                     </p>
-                    <button class="plan-btn">Choose plan</button>
+                    <button class="plan-btn btn-plan">Choose plan</button>
                 </div>
-                <div class="pricing-plan">
-                    <h2 class="plan-title">Family Plan</h2>
+                <div class="pricing-plan pricing-card">
+                    <h2 class="plan-title plan-name">Family Plan</h2>
                     <p class="plan-subtitle">Up to 50% off on Yearly Plan</p>
                     <p class="plan-description">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit labore in dolorem proident est et in officia nam nam cumque atque eligendi aut omnis amet tempor vel quod velit imperdiet tempore
                     </p>
-                    <!-- ID "family-price" (ou ultimate-price) ajouté ici -->
-                    <p class="plan-price-container" id="family-price">
+                    <!-- Renamed ID from family-price to ultimate-price to match JS -->
+                    <p class="plan-price-container" id="ultimate-price">
                         <span class="price">$15</span> /users/month
                     </p>
-                    <button class="plan-btn">Choose plan</button>
+                    <button class="plan-btn btn-plan">Choose plan</button>
                 </div>
             </div>
         </div>
@@ -267,7 +264,8 @@
                     <li class="footer-item"><a href="#" class="footer-link">Pricing</a></li>
                     <li class="footer-item"><a href="#" class="footer-link">Teams</a></li>
                 </ul>
-                <div class="go-to-top">
+                <!-- Added got-to-top class alongside existing go-to-top due to typo in JS -->
+                <div class="go-to-top got-to-top">
                     <p class="go-to-top-text">Go to Top</p>
                     <img src="" alt="" class="go-to-top-icon">
                 </div>
@@ -290,34 +288,11 @@
         </div>
     </footer>
 
+    <script src="index.JS"></script>
     <script>
-        import './js/Home page.js';
-
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
-
-        const btnMonthly = document.getElementById("btn-monthly");
-        const btnYearly = document.getElementById("btn-yearly");
-        const basicPrice = document.getElementById("basic-price");
-        const premiumPrice = document.getElementById("premium-price");
-        const familyPrice = document.getElementById("family-price");
-
-        btnMonthly.addEventListener("click", () => {
-            btnMonthly.classList.add("active");
-            btnYearly.classList.remove("active");
-            basicPrice.innerHTML = '<span class="price">$20</span> /month';
-            premiumPrice.innerHTML = '<span class="price">$50</span> /month';
-            familyPrice.innerHTML = '<span class="price">$15</span> /users/month';
-        });
-
-        btnYearly.addEventListener("click", () => {
-            btnYearly.classList.add("active");
-            btnMonthly.classList.remove("active");
-            basicPrice.innerHTML = '<span class="price">$10</span> /month';
-            premiumPrice.innerHTML = '<span class="price">$25</span> /month';
-            familyPrice.innerHTML = '<span class="price">$7.50</span> /users/month';
-        });
     </script>
 </body>
 </html>
